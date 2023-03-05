@@ -1,0 +1,304 @@
+escreva("Texto qualquer") -> Faz com que um texto apareça na tela 
+
+escreva(77) -> Faz aparecer um número na tela
+
+leia(a) -> grava algo digitado pelo usuário dentro da variável
+
+escreva("O total é " + total + ".\n") ->  \n faz com que o texto pule a linha
+
+Tipos de Informações:
+
+-> inteiro ->2->3->4->8->7->9->10
+-> cadeia de caracteres -> "aa"-> "arroz"-> "Amauri"
+-> real a = 0.0 -> 20.74 -> 25.85
+-> logico a = verdadeiro ou falso
+ 
+cadeia a = "Ze" -> Salvei a palavra Ze na memoria RAM identificada pela letra a
+cadeia b = "arroz" -> Salvei a palavra arroz na memoria RAM identificada pela letra b
+inteiro c = 35 -> Salvei o numero 35 na memoria RAM identificada pela letra c
+
+Combinando elementos
+
+escreva("o "+ a + " gosta de " + b) -> "o " combinado coma informação 'a' combinado com " gosta de" combinado com informação 'b'
+
+variável -> "o " combinado com a variável a combinado com " gosta de" combinado com a variáel b
+
+escreva( "\n") faz com que o texto pule a linha
+
+OPERADORES ARITMETICOS
+
++ -> soma
+- -> subtração 
+* -> multiplicação
+/ -> divisão
+% -> resto da divisão
+
+OPERADORES RELACIONAIS (comparação resultando em verdadeiro ou falso)
+
+>	indica se é maior.
+<	indica se é menor.
+>=	indica se é maior ou se é igual.
+<=	indica se é menor ou se é igual.
+==	indica se é igual.
+!=	indica se é diferente.
+
+OPERADORES LOGICOS
+
+e	-- analisa varias situações e se todas forem verdadeiras aparece verdadeiro
+ou	-- analisa varias situações e se pelo menos uma for verdadira aparece verdadeiro	
+nao	-- inverte a situação ( verdadeira vira falso, e falso vira verdadeiro)
+
+
+ESTRUTURA CONDICIONAL SE -> direciona o programa se cumprir uma condição.
+
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro idade = 0
+		
+		escreva("Qual sua idade? ")
+		leia(idade)
+		
+		se (idade >= 18){
+			escreva("Já pode ser preso.")
+		}senao{
+			escreva("Ainda não pode ser preso.\n")	
+		}
+		cadeia nome = ""
+		escreva("Qual seu nome? ")
+		leia(nome)
+		se( nome == "ze"){
+			escreva("Nome popular")
+		}senao se (nome == "Creosvaldo"){
+			escreva("Nome incomum")
+		}senao se (nome == "Amaurivit"){
+			escreva("Nome estrangeiro")
+		}senao{
+			escreva("Você não escolheu um nome válido")
+		}
+		se( idade > 18 e nome == "Joaquim"+ "\n"){
+			escreva("Baum também")
+		}
+	}
+}
+
+
+VARIÁVEIS ACUMULATIVAS -> são variáveis que mantem o valor original e vão aumentando ou diminuindo
+
+programa
+{
+	
+	funcao inicio()
+	{
+		real conta = 0.0
+		real valor = 0.0
+		escreva("Digite o valor que você tem na conta: ")
+		leia(conta)
+		
+		escreva("Digite o valor que será depositado: ")
+		leia(valor)
+		conta = conta + valor
+		escreva("Agora você tem "+ conta + " reais na conta.")
+
+		escreva("\nDigite o valor que será depositado: ")
+		leia(valor)
+		conta = conta + valor
+		escreva("Agora você tem "+ conta + " reais na conta.")
+
+		escreva("\nAgora você quer sacar? ")
+		leia(valor)
+		se( valor > conta){
+			escreva("Você não pode sacar!")
+		}senao{
+			conta = conta - valor
+			escreva("Agora você tem "+ conta + " reais na conta.")
+		}
+		
+	}
+}
+
+VARIÁVEIS SUBSTITUIVEIS -> são variáveis que perdem seus valores as condições são realizadas.f
+
+programa
+{
+	
+	funcao inicio()
+	
+{
+		inteiro n1 = 0
+		inteiro n2 = 0
+		inteiro n3 = 0
+		inteiro n4 = 0
+		inteiro maior = 0
+		
+		escreva("Digite um número: ")
+		leia(n1)
+		maior = n1
+		escreva("Digite outro número: ")
+		leia(n2)
+		se( n2 > maior){
+			maior = n2
+		}
+		escreva("Digite um terceiro número: ")
+		leia(n3)
+		se( n3 > maior){
+			maior = n3
+		}
+		escreva("Digite um quarto número: ")
+		leia(n4)
+		se( n4 > maior){
+			maior = n4
+		}
+		escreva("O maior número é " + maior)
+				
+	}
+}
+
+
+MÚLTILPLOS 
+
+programa
+{
+	
+	funcao inicio()
+	{
+		
+		inteiro a = 0 /* estou criando uma variável*/
+		escreva("Digite um número: ")
+		leia(a)
+		/* Calculando múltiplos */
+		se ( a % 2 == 0 ){
+			escreva("É múltiplo de 2 ou par.")
+		}
+		se ( a % 3 == 0 ){
+			escreva("É múltiplo de 3.")
+		}
+		se ( a % 4 == 0 ){
+			escreva("É múltiplo de 4.")
+		}
+		se ( a % 5 == 0 ){
+			escreva("É múltiplo de 5.")
+		}
+		
+
+
+		
+	}
+}
+
+ESTRUTURA CONDICIONAL ANINHADA
+
+programa
+{
+	
+	funcao inicio()
+	{
+		// estrutura condicional aninhada
+		inteiro idade = 0
+		cadeia nacional = ""
+		cadeia escola = ""
+		cadeia cal = ""
+		escreva("Digite uma idade: ")
+		leia(idade)
+		se(idade >= 18){
+			escreva("Qual a sua nacionalidade? ")
+			leia(nacional)
+			se(nacional == "brasileiro"){
+				escreva("Você tem calvície? ")
+				leia(cal)
+				se(cal == "sim"){
+					escreva("Procure um tratamento.")
+				}
+			}senao{
+				escreva("Não é brasileiro.")
+			}
+		}senao{
+			escreva("Onde você estuda? ")
+			leia(escola)
+			se(escola == "polivalente"){
+				escreva("Estuda no Santo Antonio.")
+			}senao{
+				escreva("Estuda em outro lugar.")
+			}
+
+		}
+		
+	}
+}
+
+ESTRUTURA ESCOLHA
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro a = 0
+		escreva("Escolha um sabor de miojo \n")
+		escreva("------------------------- \n")
+		escreva("1 - Para galinha caipira \n")
+		escreva("2 - Para carne \n")
+		escreva("3 - Para tomate \n")
+		escreva("Opção: \n")
+		leia(a)
+
+		escolha(a){
+			caso 1:
+			escreva("Melhor sabor.\n")
+			pare
+			caso 2:
+			escreva("Não tem carne.\n")
+			pare
+			caso 3:
+			escreva("Não tem tomate.\n")
+			pare
+			caso contrario:
+			escreva("Você não escolheu uma opção válida!")
+		}
+		
+	}
+}
+
+ESTRUTURA DE REPETIÇÃO 
+
+programa
+{
+	
+	funcao inicio()
+	{
+		cadeia nome = ""
+		inteiro valor = 0
+		cadeia p = ""
+		inteiro total = 0
+		inteiro contador = 0
+		enquanto (contador != 4){
+			escreva("Cadastre um produto: ")
+			leia(nome)
+			escreva("Cadastre o valor: ")
+			leia(valor)
+			contador = contador + 1
+			total = total + valor
+		}
+		escreva("Foram cadastrados " + contador+ " produtos")
+		escreva(" com valor total é "+total)
+	}
+}
+
+ESTRUTURA DE REPETIÇÃO INFINITA
+programa
+{
+	
+	funcao inicio()
+	{
+		
+		cadeia nome = ""
+		enquanto(verdadeiro){
+			escreva("Digite seu nome: ")
+			leia(nome)
+			se(nome == "aaa"){
+				pare
+			}
+		}
+	}
+}
